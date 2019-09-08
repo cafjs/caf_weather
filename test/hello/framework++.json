@@ -1,0 +1,36 @@
+{
+    "name": "top",
+    "env" : {
+        "appProtocol" : "http",
+        "appPublisher" :"root",
+        "appLocalName" : "weather",
+        "appSuffix" : "vcap.me:3000"
+    },
+    "components": [
+        {
+            "name": "log",
+            "env" : {
+                  "logLevel" : "DEBUG"
+
+            }
+
+        },
+        {
+            "name": "security",
+            "module": null
+        },
+        {
+            "name": "cp2"
+        },
+        {
+            "name": "weather",
+            "module": "../../index.js#plug",
+            "description": "Weather service.",
+            "env" : {
+                "weatherURL" : "process.env.WEATHER_URL||https://samples.openweathermap.org/data/2.5/weather",
+                "openweathermap": "process.env.OPEN_WEATHER_MAP||true",
+                "weatherKeyAPI": "process.env.WEATHER_KEY_API||b6907d289e10d714a6e88b30761fae22"
+            }
+        }
+    ]
+}
