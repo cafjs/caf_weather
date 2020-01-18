@@ -1,22 +1,22 @@
 "use strict"
 
-var hello = require('./hello/main.js');
-var app = hello;
+const hello = require('./hello/main.js');
+const app = hello;
 
-var caf_core= require('caf_core');
-var caf_comp = caf_core.caf_components;
-var myUtils = caf_comp.myUtils;
-var async = caf_comp.async;
-var cli = caf_core.caf_cli;
+const caf_core= require('caf_core');
+const caf_comp = caf_core.caf_components;
+const myUtils = caf_comp.myUtils;
+const async = caf_comp.async;
+const cli = caf_core.caf_cli;
 
-var crypto = require('crypto');
+const crypto = require('crypto');
 
-var APP_FULL_NAME = 'root-weather';
+const APP_FULL_NAME = 'root-weather';
 
-var CA_OWNER_1='me'+ crypto.randomBytes(8).toString('hex');
-var CA_LOCAL_NAME_1='ca1';
-var FROM_1 =  CA_OWNER_1 + '-' + CA_LOCAL_NAME_1;
-var FQN_1 = APP_FULL_NAME + '#' + FROM_1;
+const CA_OWNER_1='me'+ crypto.randomBytes(8).toString('hex');
+const CA_LOCAL_NAME_1='ca1';
+const FROM_1 =  CA_OWNER_1 + '-' + CA_LOCAL_NAME_1;
+const FQN_1 = APP_FULL_NAME + '#' + FROM_1;
 
 process.on('uncaughtException', function (err) {
                console.log("Uncaught Exception: " + err);
@@ -27,7 +27,7 @@ process.on('uncaughtException', function (err) {
 
 module.exports = {
     setUp: function (cb) {
-       var self = this;
+       const self = this;
         app.init( {name: 'top'}, 'framework.json', null,
                       function(err, $) {
                           if (err) {
@@ -42,7 +42,7 @@ module.exports = {
                       });
     },
     tearDown: function (cb) {
-        var self = this;
+        const self = this;
         if (!this.$) {
             cb(null);
         } else {
@@ -51,9 +51,9 @@ module.exports = {
     },
 
     dirtyQuery: function(test) {
-        var self = this;
+        const self = this;
         var s1;
-        var from1 = FROM_1;
+        const from1 = FROM_1;
         test.expect(3);
         var lastId;
         async.series(

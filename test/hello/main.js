@@ -1,4 +1,4 @@
-var caf = require('caf_core');
+const caf = require('caf_core');
 
 exports.init = function(spec, frameworkDesc, modules, cb) {
     modules = modules || [];
