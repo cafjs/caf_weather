@@ -1,16 +1,14 @@
-# CAF.js (Cloud Assistant Framework)
+# Caf.js
 
 Co-design permanent, active, stateful, reliable cloud proxies with your web app and gadgets.
 
-See http://www.cafjs.com
+See https://www.cafjs.com
 
-## CAF lib to obtain weather info
+## Library to Access Weather Information
 
 [![Build Status](https://travis-ci.org/cafjs/caf_weather.svg?branch=master)](https://travis-ci.org/cafjs/caf_weather)
 
-This repository contains a CAF library that checks the weather
-
-
+This repository contains a `Caf.js` library that checks the weather.
 
 ## API
 
