@@ -6,7 +6,7 @@ See https://www.cafjs.com
 
 ## Library to Access Weather Information
 
-[![Build Status](https://travis-ci.org/cafjs/caf_weather.svg?branch=master)](https://travis-ci.org/cafjs/caf_weather)
+[![Build Status](https://github.com/cafjs/caf_weather/actions/workflows/push.yml/badge.svg)](https://github.com/cafjs/caf_weather/actions/workflows/push.yml)
 
 This repository contains a `Caf.js` library that checks the weather.
 
